@@ -16,7 +16,7 @@ object TwitterStreamer {
   }
 
 
-  class TwitterListener(call_back: Status => Unit) extends StatusListener {
+  class TwitterListener(call_back: Status => Unit) extends StatusListener { // Create status listener to prevent errors stream from stopping
 
     def onStatus(data: Status): Unit = call_back(data)
 
