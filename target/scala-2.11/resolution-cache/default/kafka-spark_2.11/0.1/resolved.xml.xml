@@ -4,7 +4,7 @@
 		module="kafka-spark_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190204114608"
+		publication="20190204120921"
 	>
 		<description>
 		kafka-spark
@@ -32,5 +32,15 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.twitter4j" name="twitter4j-stream" rev="3.0.3" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka_2.11" rev="2.1.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka-clients" rev="2.1.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-10_2.11" rev="2.0.0" conf="compile->default(compile)"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-core" matcher="exact" rev="2.8.7"/>
+		<override org="com.fasterxml.jackson.core" module="jackson-databind" matcher="exact" rev="2.8.7"/>
+		<override org="com.fasterxml.jackson.module" module="jackson-module-scala_2.11" matcher="exact" rev="2.8.7"/>
 	</dependencies>
 </ivy-module>
