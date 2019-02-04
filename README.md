@@ -4,10 +4,14 @@
 
 ## it contains streaming the twitter feeds, kafka, and spark independently, and linked via main. 
 
+## To run TwitterStream
+
 in order to run the twitter stream, a twitter developer account is required.
 From the developer account, you need to have an app created with the app. 
 Information on how to create an app with twitter can be found at: <br />
 https://docs.inboundnow.com/guide/create-twitter-application/
+
+## To run KafkaProducer
 
 running this project for Kafka and Spark requires to have zookeeper and kafka servers running. <br />
 Below are the steps to run those.
@@ -30,9 +34,12 @@ else : wherever you install it
 4. Create topics<br />
     `./bin/kafka-topics --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic colors`
 
-5. Create Producers
+5. Create Producers<br />
    `kafka-console-producer --broker-list localhost:9092 --topic colors`
    
-6. Create Consumers
+6. Create Consumers<br />
   `kafka-console-consumer --bootstrap-server localhost:9092 --topic colors`
 
+## To Run SparkConsumer
+
+1. Make sure that the `build.sbt` has the appropriate dependencies.

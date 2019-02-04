@@ -1,4 +1,5 @@
 // Global imports
+import ichigo.SparkConsumer.runSpark
 import twitter4j.FilterQuery
 
 // Local Imports
@@ -17,6 +18,8 @@ object main {
       "Yellow", "yellow", "Red", "RED", "red", "BLUE", "Blue", "blue", "Violet", "VIOLET", "violet")
 
     twitterStream.filter(new FilterQuery().track(KEYWORDS)) // does filtering for keywords
+
+    runSpark()
 
   }
 }
