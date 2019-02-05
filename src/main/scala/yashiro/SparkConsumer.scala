@@ -18,7 +18,7 @@ object SparkConsumer {
 
     val ssc = new StreamingContext(conf, Seconds(1))
 
-    val TOPIC = Array("twitter")
+    val TOPIC = Array("colors")
 
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "localhost:9092",

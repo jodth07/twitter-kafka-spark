@@ -8,7 +8,7 @@ import twitter4j.Status
 
 object KafkaProducer {
 
-  val TOPIC = "twitter"
+  val TOPIC = "colors"
 
   val props = new Properties()
   props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
